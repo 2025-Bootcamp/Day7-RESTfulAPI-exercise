@@ -125,6 +125,25 @@ paths:
                   pagination:
                     type: object
                     $ref: "#/components/schemas/Pagination"
+              examples:
+                todo-list-example:
+                  summary: Todo 列表示例
+                  value:
+                    todos:
+                      - id: 1
+                        title: "完成项目文档"
+                        status: "done"
+                      - id: 2
+                        title: "学习 React Hooks"
+                        status: "doing"
+                      - id: 3
+                        title: "准备周会演示"
+                        status: "todo"
+                    pagination:
+                      total: 3
+                      page: 1
+                      limit: 10
+                      totalPages: 1
 
     post:
       summary: 创建 todo
